@@ -1,4 +1,4 @@
-package br.com.kualit;
+package br.com.kualit.algorithms;
 
 public class TwoPointers {
 
