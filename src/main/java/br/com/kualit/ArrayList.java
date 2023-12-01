@@ -2,21 +2,16 @@ package br.com.kualit;
 
 import java.util.Arrays;
 import java.util.Objects;
-
 public class ArrayList<T> {
     private static final int TOTAL_SIZE = 10;
     private int size;
     private Object[] elements;
-
-
     public ArrayList(){
         elements = new Object[TOTAL_SIZE];
     }
-
     public int getSize(){
         return this.size;
     }
-
     public void addItem(T element){
         if(size >= elements.length)
             increeseCapacity();
