@@ -1,4 +1,4 @@
-package br.com.kualit;
+package br.com.kualit.datastructures;
 
 import java.util.Arrays;
 import java.util.Objects;
