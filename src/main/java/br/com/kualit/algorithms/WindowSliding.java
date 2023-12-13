@@ -1,20 +1,19 @@
 package br.com.kualit.algorithms;
 
 public class WindowSliding {
+    public int[] maxSum(int[] nums) {
+        int maxSum = 0;
+        int maxSumIndex = -1;
+        int count = nums.length - 3;
 
-    public int[] maxValue(int[] nums) {
-        int maiorSoma = Integer.MIN_VALUE;
-        int indiceMaiorSoma = -1;
+        for (int i = 0; i <= count; i++) {
+            int actualMaxSum = nums[i] + nums[i + 1] + nums[i + 2];
 
-        for (int i = 0; i <= nums.length - 3; i++) {
-            int teste = nums.length - 3;
-            int somaAtual = nums[i] + nums[i + 1] + nums[i + 2];
-
-            if (somaAtual > maiorSoma) {
-                maiorSoma = somaAtual;
-                indiceMaiorSoma = i;
+            if (actualMaxSum > maxSum) {
+                maxSum = actualMaxSum;
+                maxSumIndex = i;
             }
         }
-        return new int[]{indiceMaiorSoma, maiorSoma};
+        return new int[]{maxSumIndex, maxSum};
     }
 }
